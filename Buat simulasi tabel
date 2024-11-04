@@ -1,0 +1,67 @@
+import numpy as np
+import pandas as pd
+
+class PiNetworkValueCalculator:
+    def __init__(self, pionir_kyc, validator, adopsi_ekosistem, transaksi, permintaan_pasar):
+        """
+        Inisialisasi dengan data dasar.
+        """
+        self.pionir_kyc = pionir_kyc
+        self.validator = validator
+        self.adopsi_ekosistem = adopsi_ekosistem
+        self.transaksi = transaksi
+        self.permintaan_pasar = permintaan_pasar
+        
+    def calculate_value(self):
+        """
+        Menghitung nilai Pi Network berdasarkan rumus yang diberikan.
+        """
+        nilai_pi = (self.pionir_kyc * self.adopsi_ekosistem * self.permintaan_pasar + self.transaksi) / self.validator
+        return nilai_pi
+
+    @staticmethod
+    def generate_data_scenarios(pionir_range, validator_range, adopsi_range, transaksi_range, permintaan_range, num_samples=10):
+        """
+        Menghasilkan skenario data secara acak untuk pengujian.
+        """
+        scenarios = []
+        for _ in range(num_samples):
+            scenario = {
+                "Pionir KYC": np.random.choice(pionir_range),
+                "Validator": np.random.choice(validator_range),
+                "Adopsi Ekosistem": np.random.choice(adopsi_range),
+                "Transaksi": np.random.choice(transaksi_range),
+                "Permintaan Pasar": np.random.choice(permintaan_range)
+            }
+            # Menghitung nilai untuk setiap skenario
+            calculator = PiNetworkValueCalculator(
+                scenario["Pionir KYC"],
+                scenario["Validator"],
+                scenario["Adopsi Ekosistem"],
+                scenario["Transaksi"],
+                scenario["Permintaan Pasar"]
+            )
+            scenario["Nilai Pi"] = calculator.calculate_value()
+            scenarios.append(scenario)
+        
+        return pd.DataFrame(scenarios)
+
+# Generate skenario data
+pionir_range = [1000000, 5000000, 10000000]
+validator_range = [1000, 2000, 5000, 10000]
+adopsi_range = [0.5, 0.6, 0.7, 0.8, 0.9]
+transaksi_range = [5000, 10000, 20000, 50000]
+permintaan_range = [0.8, 0.9, 1.0]
+
+# Create data scenarios
+df_scenarios = PiNetworkValueCalculator.generate_data_scenarios(
+    pionir_range,
+    validator_range,
+    adopsi_range,
+    transaksi_range,
+    permintaan_range,
+    num_samples=10
+)
+
+# Display the table
+df_scenarios
