@@ -1,0 +1,58 @@
+Variabel Tambahan
+
+Kita tambahkan variabel-variabel berikut:
+
+: Tingkat adopsi ekosistem, diukur dari persentase pionir yang menggunakan aplikasi atau layanan berbasis Pi Network (dalam bentuk persentase dari total pionir yang KYC).
+
+: Jumlah transaksi dalam jaringan Pi Network per periode tertentu (misalnya per hari atau per bulan), sebagai indikator aktivitas jaringan.
+
+: Permintaan pasar, diukur sebagai rasio permintaan terhadap suplai Pi. Ini dapat diwakili oleh volume permintaan (misalnya, jumlah pengguna yang mencari Pi atau jumlah Pi yang diperdagangkan di pasar sekunder).
+
+
+Rumus Sempurna
+
+Rumus untuk menghitung nilai perkiraan  dari Pi Network dapat dituliskan sebagai berikut:
+
+V = \frac{(P \times A \times D) + (T)}{N}
+
+di mana:
+
+: Jumlah pionir yang sudah KYC.
+
+: Jumlah validator.
+
+: Tingkat adopsi ekosistem, dalam persentase (0 < A ≤ 1).
+
+: Jumlah transaksi harian.
+
+: Permintaan pasar, diukur sebagai rasio permintaan terhadap suplai (0 < D ≤ 1).
+
+
+Penjelasan
+
+ memberikan gambaran tentang pengguna Pi yang aktif dalam ekosistem, sehingga memperlihatkan nilai intrinsik dari ekosistem Pi Network.
+
+ memperhitungkan permintaan pasar untuk Pi, di mana semakin tinggi permintaan, semakin tinggi pula nilai Pi.
+
+ menambah bobot berdasarkan aktivitas jaringan atau jumlah transaksi. Ini penting karena semakin banyak transaksi menunjukkan utilitas yang lebih tinggi.
+
+ tetap mempertahankan peran sebagai faktor pengaman, di mana semakin banyak validator, nilai akan lebih terjaga karena validasi yang lebih luas.
+
+
+Contoh Perhitungan
+
+Interpretasi
+
+Nilai Pi akan lebih tinggi saat:
+
+Lebih banyak pionir yang menggunakan layanan Pi (tingkat adopsi tinggi).
+
+Jumlah transaksi harian meningkat.
+
+Permintaan pasar tinggi.
+
+
+Jumlah validator yang lebih besar membantu menjaga stabilitas nilai.
+
+
+Dengan cara ini, rumus lebih mencerminkan nilai dari Pi Network yang didorong oleh pertumbuhan ekosistem, permintaan pasar, dan aktivitas jaringan.
